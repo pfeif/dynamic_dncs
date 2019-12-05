@@ -1,14 +1,16 @@
 # Dynamic DNcS (Dynamic Domain Namecheap System)
-TL;DR: Edit `HOST`, `DOMAIN`, and `PASSWORD` at the top of ddncs.py to
-configure. Run manually at command line with `python3 ddncs.py` or set up a
-scheduler like cron.
+## TL;DR
+Edit `HOST`, `DOMAIN`, and `PASSWORD` at the top of dynamic_dncs.py to
+configure. Run manually at command line with `python3 dynamic_dncs.py` or set
+up a scheduler like cron.
 
+## About
 Dynamic DNcS (or DDNcS) is a very simple Dynamic DNS record updater that works
 with your Namecheap domain. Many people have written "lite" address-updating
 programs which either employ a web UI or include a helpful command line menu or
 work with 20 different services. This isn't any of those. DDNcS is just a
-simple Python 3 script that does the bare minimum to update your DNS record
-with Namecheap.
+simple [Python 3](https://www.python.org/) script that does the bare minimum to
+update your DNS record with Namecheap.
 
 I wrote DDNcS years ago out of frustration with setting up
 [ddclient](https://github.com/ddclient/ddclient). I appreciate the hard work
@@ -26,10 +28,12 @@ I plan to update DDNcS soon with a dead-simple IP address cache system and the
 ability to pass a host/IP combo at the command line, but that's it! That's
 where it stops.
 
-Until that's done, you can configure the program by editing the global `HOST`,
-`DOMAIN`, and `PASSWORD` variables at the top of ddncs.py. You can either run
-the program manually by calling `python3 ddncs.py` at the command line or
-setting up a cron job by running `crontab -e` and scheduling as you see fit.
+## Usage
+Until my planned updates are done, you can configure the program by editing the
+global `HOST`, `DOMAIN`, and `PASSWORD` variables at the top of
+dynamic_dncs.py. You can either run the program manually by calling
+`python3 dynamic_dncs.py` at the command line or setting up a cron job by
+running `crontab -e` and scheduling as you see fit.
 [crontab.guru](https://crontab.guru/) might be able to help you with that, but
-I think `@reboot` is a good option. (I don't know crontab guru. I just like the
-website.)
+I think `@reboot sleep 60; python3 /path/to/dynamic_dncs.py` is a good option.
+(Also, I don't know crontab guru. I just like the website.)
