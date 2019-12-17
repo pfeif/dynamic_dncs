@@ -9,7 +9,7 @@ import urllib.request   # to open URLs for getting/setting IP address
 
 # The JSON file that holds the Namecheap host settings is assumed to be named
 # settings.json and is expected to be in the same path as this program.
-SETTINGS_FILE = "my_settings.json"
+SETTINGS_FILE = "settings.json"
 
 
 def main():
