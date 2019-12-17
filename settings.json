@@ -1,0 +1,23 @@
+{
+    "hosts": [
+        {
+            "host": "@",
+            "domain": "yourdomain.tld",
+            "ip": "127.0.0.1",
+            "password": "af892be04ce29353cd7b69b915cb172d"
+        },
+        {
+            "host": "ddns",
+            "domain": "yourdomain.tld",
+            "ip": "",
+            "password": "af892be04ce29353cd7b69b915cb172d"
+        },
+        {
+            "host": "@",
+            "domain": "yourotherdomain.tld",
+            "ip": "",
+            "password": "4d1045bb5534c1ca3fe6118c47dfddc1"
+
+        }
+    ]
+}
