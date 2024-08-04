@@ -1,0 +1,8 @@
+name: dynamic_dncs
+
+services:
+  app:
+    container_name: dynamic_dncs
+    restart: no
+    build:
+      dockerfile: ./Dockerfile

@@ -1,0 +1,8 @@
+**/__pycache__
+**/.dockerignore
+**/.git
+**/.gitignore
+**/compose.y*ml
+**/Dockerfile*
+LICENSE.md
+README.md
