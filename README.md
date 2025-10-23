@@ -11,7 +11,7 @@ minimum to update your Namecheap DNS records.
 You can set the domain configurations by editing the [config.toml][config]
 file. Examples are provided in the file and should be replaced with your own.
 You may add as many as you'd like. If you have one domain to update, one is all
-you need. If you have 50 domains to update, add all 50. Do whatever you want.
+you need. If you have 50 domains to update, add all 50.
 
 A minimal `config.toml` to update my-dns.example.com to your current IP might
 look like this:
@@ -24,7 +24,7 @@ ip = ""
 password = "32CharacterAlphaNumericPassword1"
 ```
 
-Note: The password field is not for your Namecheap account password. It is the
+*Note*: The password field is not for your Namecheap account password. It is the
 Dynamic DNS password which can be found under the "Advanced DNS" section when
 you click on the "Manage" button next to your domain.
 
@@ -33,10 +33,10 @@ you click on the "Manage" button next to your domain.
 ### Python
 
 The first option for running this script is using your local Python
-installation. The only thing you need is a currently-supported version of
-Python. The script uses only built-in Python libraries, so there's nothing to
-pip install, no virtual environments to create or maintain, and no potential for
-typo squatting vulnerabilities on PyPI.
+installation. The only thing you need is Python version 3.11 or newer. The
+script uses only built-in Python libraries, so there's nothing to pip install,
+no virtual environments to create or maintain, and no potential for typo
+squatting vulnerabilities on PyPI.
 
 It's as simple as updating `config.toml` and running `python dynamic_dncs.py`
 in the command line. Of course, you're also free to run using tools like [uv][]
@@ -89,8 +89,9 @@ likely that my dynamic IP will change and the dynamic DNS address will need to
 be updated with Namecheap.
 
 To edit your cron configuration file, execute `crontab -e` in the command line.
-[crontab.guru][crontab] might be helpful with finding the right configuration
-for you, but my crontab file probablys look something like this right now:
+[crontab.guru][crontab] and my [cron template][cron-template] might be helpful
+with finding the right configuration for you, but my crontab file probably looks
+something like this right now:
 
 #### Using local Python installation
 
@@ -121,6 +122,7 @@ The TL;DR of the license is that you can do whatever you want with the extension
 so long as you don't claim I endorse it.
 
 [config]: config.toml
+[cron-template]: https://gist.github.com/pfeif/5f49d6d3dde83ba82004552f784ed2ad
 [crontab]: https://crontab.guru/
 [python-image]: https://hub.docker.com/_/python
 [uv]: https://docs.astral.sh/uv/
